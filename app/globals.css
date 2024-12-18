@@ -2,20 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  df-messenger {
+    z-index: 999;
+    position: fixed;
+    --df-messenger-font-color: #000;
+    --df-messenger-font-family: Google Sans;
+    --df-messenger-chat-background: #f3f6fc;
+    --df-messenger-message-user-background: #d3e3fd;
+    --df-messenger-message-bot-background: #fff;
+    bottom: 16px;
+    right: 16px;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
